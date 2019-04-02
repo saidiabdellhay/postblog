@@ -6,10 +6,12 @@ import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
 import { FourOnFourComponent } from './four-on-four/four-on-four.component';
 import { AuthGuardGuard } from './services/auth-guard.guard';
+import { EditAppareilComponent } from './edit-appareil/edit-appareil.component';
 
 const appRoutes: Routes = [
   { path: 'appareils',canActivate: [AuthGuardGuard], component: AppareilViewComponent },
   { path: 'appareils/:id',canActivate: [AuthGuardGuard], component: SingleAppareilComponent},
+  { path: 'edit', canActivate: [AuthGuardGuard], component: EditAppareilComponent},
   { path: 'auth', component: AuthComponent },
   { path: '', component: AppareilViewComponent },
   { path: 'not-found', component: FourOnFourComponent },

@@ -15,6 +15,7 @@ import { AppareilService } from './services/appareil.service';
 import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
 import { FourOnFourComponent } from './four-on-four/four-on-four.component';
 import { AuthGuardGuard } from './services/auth-guard.guard';
+import { EditAppareilComponent } from './edit-appareil/edit-appareil.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AuthGuardGuard } from './services/auth-guard.guard';
     AuthComponent,
     AppareilViewComponent,
     SingleAppareilComponent,
-    FourOnFourComponent
+    FourOnFourComponent,
+    EditAppareilComponent
   ],
   imports: [
     BrowserModule,
