@@ -1,49 +1,14 @@
-import { Component } from '@angular/core';
-import { reject } from 'q';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
-  isAuth = false;
-
-  lastUpdate = new Promise(
-    (resolve,reject) => {
-      const date = new Date();
-      setTimeout(
-        () => {
-          resolve(date);
-        }, 2000
-      );
-    }
-  );
-
-  appareils = [
-    {
-      name :'machine à laver',
-      status :'allumé'
-    },
-    {
-      name :'ordinateur',
-      status :'allumé'
-    },
-    {
-      name :'télévision',
-      status :'éteint'
-    }
-  ];
+export class AppComponent implements OnInit {
   
-  constructor() {
-    setTimeout(
-      () => {
-        this.isAuth = true;
-      },4000
-    );
-  }
+  constructor() { }
 
-  onAllumer(){
-    console.log('looo');
+  ngOnInit() {
   }
 }
